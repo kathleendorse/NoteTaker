@@ -1,3 +1,4 @@
+
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
@@ -7,7 +8,7 @@ const $noteList = $(".list-container .list-group");
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
-// A function for getting all notes from the db
+// A function for getting all notes from the db   
 const getNotes = () => {
   return $.ajax({
     url: "/api/notes",
@@ -50,12 +51,16 @@ const renderActiveNote = () => {
 };
 
 // Get the note data from the inputs, save it to the db and update the view
+    
+    //**HANDLENOTESAVE() creates a newNote object and assigns the input from the form to title and text properties of the object
 const handleNoteSave = function () {
   const newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
   };
 
+    //**SAVENOTE() is a promise. it takes the newNote object in as a parameter then calls 2 functions
+    //**GETANDRENDERNOTES() & RENDERACTIVENOTE() 
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -63,10 +68,11 @@ const handleNoteSave = function () {
 };
 
 // Delete the clicked note
+    //**HANDEDELETENOTE() .... event? calls a stoprpopagtion event method???? research this
 const handleNoteDelete = function (event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
-
+    //
   const note = $(this).parent(".list-group-item").data();
 
   if (activeNote.id === note.id) {
