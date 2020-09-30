@@ -22,7 +22,10 @@
   `
 
   ## Usage
-  Enter text and press the save icon to add it to the list. You can click on the title of any item in the list to bring it back up to view the details.  To write a new note click the pencil icon in the top right corner of the page.  To delete any item from the saved list, click the corresponding trash can icon next to the list item.  
+  Enter text and press the save icon to add it to the list. You can click on the title of any item in the list to bring it back up to view the details.  
+  To write a new note click the pencil icon in the top right corner of the page.  
+  To delete any item from the saved list, click the corresponding trash can icon next to the list item.  
+  <img src="https://github.com/kathleendorse/NoteTaker/blob/master/notetakerapp.gif?raw=true"></img>
 
   ## License
   This project is licensed under the None.
